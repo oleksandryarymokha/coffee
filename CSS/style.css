@@ -1,9 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    margin: 0;
+:root {
+    --color-header: rgba(3, 150, 100, 0.75);
+    --color-link: #214e34;
+    --color-text: #445544;
+    --bg-titles-h2: #aa8eb8;
+    --bg-color: whitesmoke;
+    --border-color: #e4bb97;
 }
 
 body {
-    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    background-color: var(--bg-color);
+}
+
+.header {
+    height: 400px;
+    background-image: url("../images/coffee-bgnd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*border-top: 1px solid transparent;*/
+    /*padding-top: 1px;*/
+    /*padding-top: 133px;*/
+    /*box-sizing: border-box;*/
+}
+
+h1 {
+    font-size: 100px;
+    font-family: "Covered By Your Grace", cursive;
+    color: var(--color-header);
+    /*padding-top: calc(50% - 350px);*/
+}
+
+.main > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main li {
+    margin: 100px 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 60px;
+}
+
+.main li > h2 {
+    font-size: 28px;
+    font-weight: 700;
+    background-color: var(--bg-titles-h2);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main li > p {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 0 5px;
+    text-align: justify;
+    text-indent: 32px;
+    line-height: 1.5;
+}
+
+.main li > a {
+    text-decoration: none;
+    color: var(--color-link);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 85px;
+    }
 }
